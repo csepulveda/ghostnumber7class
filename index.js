@@ -12,6 +12,7 @@ numberArray.forEach((number, idx) => {
 	    	}
 	}
 })
+console.log("suma/multiplicacion de valores del array usando forEach: ")
 console.log(eachTotal)
 
 
@@ -22,12 +23,14 @@ let reduceTotal = numberArray.reduce((preValue, nowValue, idx, arr) => {
 		return preValue + nowValue
 	}
 })
+console.log("suma/multiplicacion de valores del array usando forEach: ")
 console.log(reduceTotal)
 
 
 let multiTotal = numberArray.map((item, idx, arr) => {
 	return item * 10
 })
+console.log("multiplicar * 10 todos los item del array: ")
 console.log(multiTotal)
 
 
@@ -40,23 +43,17 @@ let sumArrays = data.map((item, idx, arr) => {
 		return preValue + nowValue
 	})
 })
+console.log("sumar todos los items del primer array: ")
 console.log(sumArrays[0])
+console.log("sumar todos los items del segundo array: ")
 console.log(sumArrays[1])
 
 
 let mergeItems = data.reduce((preValue, nowValue, idx, arr) => {
 	return preValue.items.concat(nowValue.items)
 })
+console.log("unir los dos arrays items en uno solo: ")
 console.log(mergeItems)
-
-// let mixArrays = data.map((item, idx, arr) => {
-// 	return item.items.reduce((preValue, nowValue, idx, arr) => {
-// 		return preValue.concat(nowValue)
-// 	})
-// })
-// console.log(mixArrays)
-
-
 
 const medias = [
   {
@@ -160,4 +157,5 @@ fixedOutput = media = medias.map((media) => {
 		
 		return {name, metas, thumbnail}
 	})
+console.log("procesar un objeto usando map y find para recuperar data especifica en formato especifico: ")
 console.log(fixedOutput)
